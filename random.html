@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="number" placeholder="Enter your guess">
+    <button id="guessbtn">Guess!!</button>
+    <p id="guesstxt"></p>
+
+    <script>
+        let input = document.querySelector('input');
+        let guessbtn = document.querySelector('#guessbtn');
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let p = document.getElementById('guesstxt');
+
+        console.log(randomNumber);
+        guessbtn.addEventListener('click', function () {
+            let userGuess = Number(input.value); // Convert to number
+
+            if (input.value === '' || isNaN(userGuess)) {
+                p.innerHTML = 'Please enter a valid number!';
+                document.body.style.backgroundColor = "lightcoral";
+            } else if (userGuess === randomNumber) {
+                p.innerHTML = 'You guessed it correctly!!';
+                document.body.style.backgroundColor = "lightgreen";
+            } else if (userGuess < randomNumber) {
+                p.innerHTML = 'The number is higher!';
+                document.body.style.backgroundColor = "rgb(255, 255, 111)";
+            } else if (userGuess > randomNumber) {
+                p.innerHTML = 'The number is lower!';
+                document.body.style.backgroundColor = "rgb(255, 255, 111)";
+            }
+        });
+    </script>
+</body>
+</html>

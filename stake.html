@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boxes Grid</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #212121;
+      }
+      .boxes {
+        display: grid;
+        grid-template-columns: repeat(5, 80px);
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .score{
+        color: white;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 550;
+        position: absolute;
+        top: 0;
+        right: 140px;
+        color: rgb(107, 213, 248);
+      }
+
+      .bx {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background-color: #444444;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .bx i {
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .styled-icon {
+        background-color: white;
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 4px;
+        color: black;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      #gamename {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-family: sans-serif;
+        font-size: 3rem;
+        background: linear-gradient(
+          to right,
+          #ef5350,
+          #f48fb1,
+          #7e57c2,
+          #2196f3,
+          #26c6da,
+          #43a047,
+          #eeff41,
+          #f9a825,
+          #ff5722
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #startbtn {
+        height: 50px;
+        width: 160px;
+        border-radius: 12px;
+        cursor: pointer;
+        background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+        background-size: 600% 600%;
+        animation: rgbGlow 10s ease infinite;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        border: 2px solid #ffffff20;
+        box-shadow: 0 8px 15px rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 18px;
+      }
+
+      #startbtn:hover {
+        transform: scale(1.1) rotateX(8deg) rotateY(8deg);
+        box-shadow: 0 15px 25px rgba(255, 255, 255, 0.2),
+          0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      /* RGB gradient animation */
+      @keyframes rgbGlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      /*grid style*/
+      .boxes-wrapper {
+        position: relative;
+        border-radius: 12px;
+        padding: 4px; /* border thickness */
+        background: conic-gradient(from 0deg, #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+        animation: spin 3s linear infinite;
+      }
+      
+      .boxes {
+        background-color: #212121; /* same as body bg */
+        border-radius: 8px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(5, 80px);
+        gap: 10px;
+      }
+      
+      @keyframes spin {
+        from {
+          filter: hue-rotate(0deg);
+        }
+        to {
+          filter: hue-rotate(360deg);
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <p id="gamename">Gem Hunter: Minefield Mayhem</p>
+    <p class="score" id="score">Score -</p>
+    <button id="startbtn">Start the Game!!</button>
+    <div class="boxes-wrapper">
+      <div class="boxes">
+        <div class="bx bx1"></div>
+        <div class="bx bx2"></div>
+        <div class="bx bx3"></div>
+        <div class="bx bx4"></div>
+        <div class="bx bx5"></div>
+        <div class="bx bx6"></div>
+        <div class="bx bx7"></div>
+        <div class="bx bx8"></div>
+        <div class="bx bx9"></div>
+        <div class="bx bx10"></div>
+        <div class="bx bx11"></div>
+        <div class="bx bx12"></div>
+        <div class="bx bx13"></div>
+        <div class="bx bx14"></div>
+        <div class="bx bx15"></div>
+        <div class="bx bx16"></div>
+        <div class="bx bx17"></div>
+        <div class="bx bx18"></div>
+        <div class="bx bx19"></div>
+        <div class="bx bx20"></div>
+      </div>
+    </div>
+
+    <script src="/perticulartask/stake.js"></script>
+  </body>
+</html>
